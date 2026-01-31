@@ -20,7 +20,7 @@ export default function ClaimPanel({ ticket, markedIds, onClaim }) {
           <button 
             key={claim} 
             className="retro-btn secondary" 
-            style={{ fontSize: '0.8rem', padding: '5px' }}
+            style={{ fontSize: '1.1rem', padding: '12px 20px', fontWeight: '600' }}
             onClick={() => handleClaim(claim)}
           >
             {claim} 📢

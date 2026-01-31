@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Caller from '@/components/Caller';
+import RevealedBrandsPanel from '@/components/RevealedBrandsPanel';
 import useGameHost from '@/hooks/useGameHost';
 
 export default function HostGame() {
@@ -138,6 +139,9 @@ export default function HostGame() {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '100%', gap: '20px' }}>
         
         <Caller onCall={callNextTagline} history={gameState?.history || []} />
+
+        {/* Revealed Brands Panel for Claim Verification */}
+        <RevealedBrandsPanel history={gameState?.history || []} />
 
         {/* Claims Notification Area */}
         {gameState?.claims?.length > 0 && (
